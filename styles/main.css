@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+	--mainTextColor-light: #000;
+	--secondaryTextColor-light: rgb(51 51 51);
+	--mainLinkColor-light: #0da2b8;
+	--mainBorderColor-light: rgb(218, 218, 218);
+	--mainBackgroundColor-light: #f0f2f5;
+
+	--mainTextColor-dark: #fff;
+	--secondaryTextColor-dark: #adb0b1;
+	--mainLinkColor-dark: rgb(30, 192, 214);
+	--mainBorderColor-dark: #2b3031;
+	--mainBackgroundColor-dark: #131415;
+
+	--mainTextColor: var(--mainTextColor-light);
+	--secondaryTextColor: var(--secondaryTextColor-light);
+	--mainLinkColor: var(--mainLinkColor-light);
+	--mainBorderColor: var(--mainBorderColor-light);
+	--mainBackgroundColor: var(--mainBackgroundColor-light);
+}
+
+* {
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.5em;
+	box-sizing: border-box;
+	color: var(--mainTextColor);
+}
+
+body {
+	background-color: var(--mainBackgroundColor);
+}
+
+p,
+span,
+li {
+	color: var(--secondaryTextColor);
+	font-size: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: var(--mainLinkColor);
+	font-weight: 500;
+}
+
+li {
+	line-height: 1.9em;
+}
+
+#container--main {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.section--page {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+#wrapper--hero {
+	display: flex;
+	align-items: center;
+	gap: 4em;
+}
+
+#user-name {
+	font-size: 3em;
+	line-height: 1em;
+}
+
+#bio {
+	font-weight: 300;
+}
+
+#profile-pic {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+}
+
+#email {
+	color: var(--mainTextColor);
+}
+
+#socials--list {
+	display: flex;
+	justify-content: flex-start;
+	column-gap: 1em;
+	flex-wrap: nowrap;
+}
+
+#socials--list a {
+	color: var(--secondaryTextColor);
+	transition: 0.3s;
+}
+
+#socials--list a:hover {
+	color: var(--mainLinkColor);
+}
+
+#skills--list {
+	list-style: none;
+}
+
+.card--work-history {
+	border-left: 1px solid var(--mainBorderColor);
+	margin-top: 3em;
+	margin-bottom: 3em;
+	padding-left: 2em;
+}
+
+.line-break {
+	background-color: var(--mainBorderColor);
+	height: 1px;
+}
+
+.card--achievement {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top: 1px solid var(--mainBorderColor);
+}
+
+.card--achievement a {
+	color: var(--mainTextColor);
+	transition: 0.3s;
+}
+
+.card--achievement a:hover {
+	color: var(--mainLinkColor);
+}
+
+@media(max-width:600px) {
+	#wrapper--hero {
+		flex-direction: column;
+		gap: 1em;
+	}
+
+	#profile-pic {
+		width: 200px;
+		height: 200px;
+	}
+
+	#socials--list {
+		justify-content: space-evenly;
+	}
+
+	.card--work-history {
+		border-left: none;
+		padding-left: 0;
+	}
+}
