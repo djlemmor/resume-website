@@ -142,6 +142,11 @@ li {
 		height: 200px;
 	}
 
+	#user-name {
+		font-size: 2.5em;
+		text-align: center;
+	}
+
 	#socials--list {
 		justify-content: space-evenly;
 	}
